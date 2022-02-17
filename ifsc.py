@@ -28,7 +28,21 @@ ifsc=ifsc[1:]
 ifsc=ifsc[0:1]
 ifsc=str(ifsc)
 ifsc=ifsc[14:25]
-print(ifsc[5:])
-print(ifsc)
-print("address :"+add)
-print(branch[3:-2])
+print('Bank code : '+ifsc[5:])
+print("ifsc :"+ifsc)
+#print("address : "+add)
+print('Bank : '+branch[3:-2])
+ac=d[1:2]
+ac=str(ac)
+ac=ac.split(",")
+ac=ac[-1]
+print('BRANCH :'+ac[1:-2])
+print("address : "+add)
+di=d[7:8]
+di=str(di)
+co=di.find("in \"")
+lo=di.find("\" D")
+print('District : '+di[co+4:lo])
+st=d[5:6]
+st=str(st)
+print('state : '+st[2:-2])
